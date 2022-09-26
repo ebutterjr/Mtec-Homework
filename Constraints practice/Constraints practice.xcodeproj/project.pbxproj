@@ -16,6 +16,7 @@
 		2C1B376228DB50FA005B8462 /* Constraints_practiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B376128DB50FA005B8462 /* Constraints_practiceTests.swift */; };
 		2C1B376C28DB50FA005B8462 /* Constraints_practiceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B376B28DB50FA005B8462 /* Constraints_practiceUITests.swift */; };
 		2C1B376E28DB50FA005B8462 /* Constraints_practiceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1B376D28DB50FA005B8462 /* Constraints_practiceUITestsLaunchTests.swift */; };
+		2C1B377D28DB6762005B8462 /* RyansPokemonPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 2C1B377C28DB6762005B8462 /* RyansPokemonPackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C1B377D28DB6762005B8462 /* RyansPokemonPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +145,9 @@
 			dependencies = (
 			);
 			name = "Constraints practice";
+			packageProductDependencies = (
+				2C1B377C28DB6762005B8462 /* RyansPokemonPackage */,
+			);
 			productName = "Constraints practice";
 			productReference = 2C1B374728DB50F9005B8462 /* Constraints practice.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,10 @@
 				Base,
 			);
 			mainGroup = 2C1B373E28DB50F9005B8462;
+			packageReferences = (
+				2C1B377A28DB651F005B8462 /* XCRemoteSwiftPackageReference "RyansPokemonPackage" */,
+				2C1B377B28DB6762005B8462 /* XCRemoteSwiftPackageReference "RyansPokemonPackage" */,
+			);
 			productRefGroup = 2C1B374828DB50F9005B8462 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -596,6 +605,33 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2C1B377A28DB651F005B8462 /* XCRemoteSwiftPackageReference "RyansPokemonPackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ryanplitt/RyansPokemonPackage";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		2C1B377B28DB6762005B8462 /* XCRemoteSwiftPackageReference "RyansPokemonPackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ryanplitt/RyansPokemonPackage";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2C1B377C28DB6762005B8462 /* RyansPokemonPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C1B377A28DB651F005B8462 /* XCRemoteSwiftPackageReference "RyansPokemonPackage" */;
+			productName = RyansPokemonPackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2C1B373F28DB50F9005B8462 /* Project object */;
 }

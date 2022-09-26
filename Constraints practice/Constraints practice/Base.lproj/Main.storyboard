@@ -1,24 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Constraints_practice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="25" translatesAutoresizingMaskIntoConstraints="NO" id="CB2-kz-iV7">
+                                <rect key="frame" x="50" y="94" width="328" height="328"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CB2-kz-iV7" secondAttribute="height" multiplier="1:1" id="CHO-xx-avk"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Dj-Cc-jGA">
+                                <rect key="frame" x="101.66666666666667" y="775.66666666666663" width="224.66666666666663" height="66.333333333333371"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="I Choose You">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
+                                    <directionalEdgeInsets key="contentInsets" top="20" leading="50" bottom="20" trailing="50"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="newPokemonButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d1P-DW-G0b"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pikachu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJC-NZ-jwV">
+                                <rect key="frame" x="50" y="486" width="328" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hKf-W3-qJ3">
+                                <rect key="frame" x="50" y="578" width="328" height="110"/>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LJC-NZ-jwV" secondAttribute="trailing" constant="50" id="14i-F0-Hpd"/>
+                            <constraint firstItem="CB2-kz-iV7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="3Bo-a1-RAG"/>
+                            <constraint firstItem="hKf-W3-qJ3" firstAttribute="top" secondItem="LJC-NZ-jwV" secondAttribute="bottom" constant="16" id="5kG-rI-dTs"/>
+                            <constraint firstItem="LJC-NZ-jwV" firstAttribute="top" secondItem="CB2-kz-iV7" secondAttribute="bottom" constant="64" id="A4Q-Fb-iGN"/>
+                            <constraint firstItem="9Dj-Cc-jGA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Aw1-Ui-cDg"/>
+                            <constraint firstAttribute="trailing" secondItem="CB2-kz-iV7" secondAttribute="trailing" constant="50" id="Bda-qk-qeL"/>
+                            <constraint firstItem="hKf-W3-qJ3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Mfn-ay-mXh"/>
+                            <constraint firstItem="LJC-NZ-jwV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="cL3-Wn-4ih"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hKf-W3-qJ3" secondAttribute="trailing" constant="50" id="cYx-WD-3cX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9Dj-Cc-jGA" secondAttribute="bottom" constant="50" id="g3R-yQ-ZfO"/>
+                            <constraint firstItem="CB2-kz-iV7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="maL-gV-dKx"/>
+                            <constraint firstItem="CB2-kz-iV7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="qey-nC-H2q"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="newPokemonButton" destination="9Dj-Cc-jGA" id="8sY-Q9-RYW"/>
+                        <outlet property="pokemonImageView" destination="CB2-kz-iV7" id="yog-Vh-ilR"/>
+                        <outlet property="pokemonNameLable" destination="LJC-NZ-jwV" id="4h7-ua-SAC"/>
+                        <outlet property="typeStackView" destination="hKf-W3-qJ3" id="LCS-4d-DUS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="20" y="84"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="25" width="475" height="475"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
