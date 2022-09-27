@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     var solution: Double = 0
     var currentNumber: Double = 0
     var currentOperation:String = "Placeholder"
+    var performingMath: Bool = false
     
     @IBOutlet var numberButtons: [UIButton]!
     
@@ -56,42 +57,82 @@ class ViewController: UIViewController {
         displayNumber.text = "0"
         currentNumber = 0
         previousNumber = 0
+        performingMath = false
         
     }
     
     @IBAction func plus(_ sender: UIButton) {
-        currentOperation = "+"
-//     solution = previousNumber + Double(displayNumber.text!)!
-        previousNumber = Double(displayNumber.text!)!
-        displayNumber.text = "0"
+        if performingMath == true {
+            currentOperation = "+"
+            solution = previousNumber + Double(displayNumber.text!)!
+            displayNumber.text = String(solution)
+            previousNumber = Double(displayNumber.text!)!
         currentNumber = 0
+        } else {
+            performingMath = true
+            previousNumber = Double(displayNumber.text!)!
+            currentOperation = "+"
+            displayNumber.text = "0"
+            currentNumber = 0
+    
+        }
     }
 
     @IBAction func minus(_ sender: UIButton) {
+        if performingMath == true {
        currentOperation = "-"
-        previousNumber = Double(displayNumber.text!)!
-        displayNumber.text = "0"
+            solution = previousNumber - Double(displayNumber.text!)!
+            displayNumber.text = String(solution)
+            previousNumber = Double(displayNumber.text!)!
+            currentNumber = 0
         currentNumber = 0
+        } else {
+            performingMath = true
+            previousNumber = Double(displayNumber.text!)!
+            currentOperation = "-"
+            displayNumber.text = "0"
+            currentNumber = 0
+        }
     }
     @IBAction func multiply(_ sender: Any) {
-        currentOperation = "*"
-         previousNumber = Double(displayNumber.text!)!
-         displayNumber.text = "0"
-         currentNumber = 0
+        if performingMath == true {
+       currentOperation = "*"
+            solution = previousNumber * Double(displayNumber.text!)!
+            displayNumber.text = String(solution)
+            previousNumber = Double(displayNumber.text!)!
+            currentNumber = 0
+        currentNumber = 0
+        } else {
+            performingMath = true
+            previousNumber = Double(displayNumber.text!)!
+            currentOperation = "*"
+            displayNumber.text = "0"
+            currentNumber = 0
+        }
     }
-    
 
     
     @IBAction func divide(_ sender: Any) {
-        currentOperation = "/"
-         previousNumber = Double(displayNumber.text!)!
-         displayNumber.text = "0"
-         currentNumber = 0
+        if performingMath == true {
+       currentOperation = "/"
+            solution = previousNumber / Double(displayNumber.text!)!
+            displayNumber.text = String(solution)
+            previousNumber = Double(displayNumber.text!)!
+            currentNumber = 0
+        currentNumber = 0
+        } else {
+            performingMath = true
+            previousNumber = Double(displayNumber.text!)!
+            currentOperation = "/"
+            displayNumber.text = "0"
+            currentNumber = 0
+        }
     }
     
     @IBAction func equals(_ sender: Any) {
         switch currentOperation{
         case "+":
+            performingMath = false
             solution = previousNumber + Double(displayNumber.text!)!
             
             displayNumber.text = String(solution)
