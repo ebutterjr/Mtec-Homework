@@ -9,3 +9,4 @@ func findCentury(year: Double){
     }
 }
 findCentury(year: 1601)
+findCentury(year: 1600)
