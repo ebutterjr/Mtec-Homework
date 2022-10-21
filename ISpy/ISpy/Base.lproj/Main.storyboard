@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ISpy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RU2-nH-622">
+                                <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="25" translatesAutoresizingMaskIntoConstraints="NO" id="I2y-Cq-scd">
+                                        <rect key="frame" x="0.0" y="0.0" width="475" height="475"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="I2y-Cq-scd" firstAttribute="top" secondItem="UAd-qY-ZLM" secondAttribute="top" id="ERP-ZT-XFv"/>
+                                    <constraint firstItem="I2y-Cq-scd" firstAttribute="leading" secondItem="UAd-qY-ZLM" secondAttribute="leading" id="QJU-Dm-6xi"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="UAd-qY-ZLM"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="1Uu-ca-ddG"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RU2-nH-622" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.904028" id="Buw-vR-ueh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RU2-nH-622" secondAttribute="trailing" id="Lie-BW-nZt"/>
+                            <constraint firstItem="RU2-nH-622" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Ne2-UA-M2Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RU2-nH-622" secondAttribute="bottom" id="Ydl-18-9qj"/>
+                            <constraint firstItem="RU2-nH-622" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aVe-qg-V2l"/>
+                            <constraint firstItem="RU2-nH-622" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="poV-5b-sdc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="RU2-nH-622" id="ZpI-Tx-gIw"/>
+                        <outlet property="twentyFive" destination="I2y-Cq-scd" id="y4x-bw-HbW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21.538461538461537" y="3.5545023696682461"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="25" width="475" height="475"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

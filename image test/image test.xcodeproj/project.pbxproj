@@ -16,6 +16,7 @@
 		2C18CA7D28EF1D0400319D6A /* image_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C18CA7C28EF1D0400319D6A /* image_testTests.swift */; };
 		2C18CA8728EF1D0400319D6A /* image_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C18CA8628EF1D0400319D6A /* image_testUITests.swift */; };
 		2C18CA8928EF1D0400319D6A /* image_testUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C18CA8828EF1D0400319D6A /* image_testUITestsLaunchTests.swift */; };
+		2C18CA9628EF1F1900319D6A /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C18CA9528EF1F1900319D6A /* ImagePickerManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2C18CA8228EF1D0400319D6A /* image testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "image testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C18CA8628EF1D0400319D6A /* image_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = image_testUITests.swift; sourceTree = "<group>"; };
 		2C18CA8828EF1D0400319D6A /* image_testUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = image_testUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2C18CA9528EF1F1900319D6A /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				2C18CA6528EF1D0200319D6A /* AppDelegate.swift */,
 				2C18CA6728EF1D0200319D6A /* SceneDelegate.swift */,
 				2C18CA6928EF1D0200319D6A /* ViewController.swift */,
+				2C18CA9528EF1F1900319D6A /* ImagePickerManager.swift */,
 				2C18CA6B28EF1D0200319D6A /* Main.storyboard */,
 				2C18CA6E28EF1D0400319D6A /* Assets.xcassets */,
 				2C18CA7028EF1D0400319D6A /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 				2C18CA6A28EF1D0200319D6A /* ViewController.swift in Sources */,
 				2C18CA6628EF1D0200319D6A /* AppDelegate.swift in Sources */,
 				2C18CA6828EF1D0200319D6A /* SceneDelegate.swift in Sources */,
+				2C18CA9628EF1F1900319D6A /* ImagePickerManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

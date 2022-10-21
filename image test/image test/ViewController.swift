@@ -8,12 +8,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var imageTest: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
 
-
+    @IBAction func setImageButtonPressed(_ sender: Any) {
+        ImagePickerManager().pickImage(self){ [self] image in
+            imageTest.image = image
+           }
+    }
+    
 }
 
