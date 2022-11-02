@@ -1,13 +1,13 @@
 //
-//  EmojiDictionaryUITestsLaunchTests.swift
-//  EmojiDictionaryUITests
+//  SystemViewControllersUITestsLaunchTests.swift
+//  SystemViewControllersUITests
 //
-//  Created by Easton Butterfield on 10/18/22.
+//  Created by Easton Butterfield on 10/25/22.
 //
 
 import XCTest
 
-final class EmojiDictionaryUITestsLaunchTests: XCTestCase {
+final class SystemViewControllersUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

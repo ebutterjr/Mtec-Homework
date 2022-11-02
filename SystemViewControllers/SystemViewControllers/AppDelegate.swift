@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  EmojiDictionary
+//  SystemViewControllers
 //
-//  Created by Zander Ewell on 10/18/22.
+//  Created by Easton Butterfield on 10/25/22.
 //
 
 import UIKit

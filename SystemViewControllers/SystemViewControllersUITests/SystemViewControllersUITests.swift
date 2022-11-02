@@ -1,13 +1,13 @@
 //
-//  EmojiDictionaryUITests.swift
-//  EmojiDictionaryUITests
+//  SystemViewControllersUITests.swift
+//  SystemViewControllersUITests
 //
-//  Created by Easton Butterfield on 10/18/22.
+//  Created by Easton Butterfield on 10/25/22.
 //
 
 import XCTest
 
-final class EmojiDictionaryUITests: XCTestCase {
+final class SystemViewControllersUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
