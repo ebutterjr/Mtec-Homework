@@ -6,19 +6,18 @@
 //
 
 import UIKit
-protocol SubmitPostable {
-    func submitNewPost(title: String?, body: String?, images: UIImage?)
-}
-class ViewController: UIViewController,  SubmitPostable {
-  
+//protocol SubmitPostable {
+//    func submitNewPost(title: String?, body: String?, images: UIImage?)
+//}
+class ViewController: UIViewController {
+    //                        SubmitPostable {
     
-   
-    @IBOutlet weak var postImageView: UIImageView!
+    
+    
+    
     @IBOutlet weak var profilePic: UIImageView!
     
-    @IBOutlet weak var postStackView: UIStackView!
-    @IBOutlet weak var postTitleLabel: UILabel!
-    @IBOutlet weak var postDescriptionLabel: UILabel!
+    
     var isEditingText:Bool = false
     @IBOutlet weak var aboutMeTextField: UITextField!
     @IBOutlet weak var descriptionText: UILabel!
@@ -36,7 +35,6 @@ class ViewController: UIViewController,  SubmitPostable {
     func updateUI() {
         postView.isHidden = true
         aboutMeTextField.isHidden = true
-        postStackView.isHidden = true
     }
     @IBAction func aboutMeButtonPressed(_ sender: UIButton) {
         postView.isHidden = true
@@ -65,43 +63,43 @@ class ViewController: UIViewController,  SubmitPostable {
         }
         
     }
-
+    
     @IBAction func changeImageButtonPressed(_ sender: Any) {
         ImagePickerManager().pickImage(self){ [self] image in
             profilePic.image = image
-           }
+        }
     }
     
-    func submitNewPost(title: String?, body: String?, images: UIImage?) {
-        postTitleLabel.text = title
-        postDescriptionLabel.text = body
-        postImageView.image = images
-        postStackView.isHidden = false
-    }
-    @IBSegueAction func segueVC2(_ coder: NSCoder) -> ViewControllerTwo? {
-        let vc2 = ViewControllerTwo(coder: coder)
-        vc2?.delegate = self
-        
-        return vc2
-    }
-}
-
-class ViewControllerTwo: UIViewController {
-    @IBOutlet weak var newTitle: UITextField!
-    @IBOutlet weak var newImage: UIImageView!
-    @IBOutlet weak var newDescription: UITextField!
-    var delegate: SubmitPostable?
-
-    @IBAction func submitPostButtonPressed(_ sender: UIButton) {
-        delegate?.submitNewPost(title: newTitle.text, body: newDescription.text, images: newImage.image)
-        navigationController?.popViewController(animated: true)
-    }
-    @IBAction func postAddImagePressed(_ sender: Any) {
-        ImagePickerManager().pickImage(self){ [self] image in
-            newImage.image = image
-           }
-    }
-}
+    //    func submitNewPost(title: String?, body: String?, images: UIImage?) {
+    //        postTitleLabel.text = title
+    //        postDescriptionLabel.text = body
+    //        postImageView.image = images
+    //        postStackView.isHidden = false
+    //    }
+    //    @IBSegueAction func segueVC2(_ coder: NSCoder) -> ViewControllerTwo? {
+    //        let vc2 = ViewControllerTwo(coder: coder)
+    //        vc2?.delegate = self
+    //
+    //        return vc2
+    //    }
+    //}
     
+//    class ViewControllerTwo: UIViewController {
+//        @IBOutlet weak var newTitle: UITextField!
+//        @IBOutlet weak var newImage: UIImageView!
+//        @IBOutlet weak var newDescription: UITextField!
+//        var delegate: SubmitPostable?
+//
+//        @IBAction func submitPostButtonPressed(_ sender: UIButton) {
+//            delegate?.submitNewPost(title: newTitle.text, body: newDescription.text, images: newImage.image)
+//            navigationController?.popViewController(animated: true)
+//        }
+//        @IBAction func postAddImagePressed(_ sender: Any) {
+//            ImagePickerManager().pickImage(self){ [self] image in
+//                newImage.image = image
+//            }
+//        }
+//    }
+}
 
 

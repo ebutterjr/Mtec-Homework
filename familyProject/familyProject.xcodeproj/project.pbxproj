@@ -16,6 +16,8 @@
 		2C1419A428E1E962001B2AEA /* familyProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1419A328E1E962001B2AEA /* familyProjectTests.swift */; };
 		2C1419AE28E1E962001B2AEA /* familyProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1419AD28E1E962001B2AEA /* familyProjectUITests.swift */; };
 		2C1419B028E1E962001B2AEA /* familyProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1419AF28E1E962001B2AEA /* familyProjectUITestsLaunchTests.swift */; };
+		2C18C95229100F4E00369A0E /* FamilyProjectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C18C95129100F4E00369A0E /* FamilyProjectTableViewController.swift */; };
+		2C18C956291011C700369A0E /* FamilyMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C18C955291011C700369A0E /* FamilyMember.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		2C1419A928E1E962001B2AEA /* familyProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = familyProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C1419AD28E1E962001B2AEA /* familyProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = familyProjectUITests.swift; sourceTree = "<group>"; };
 		2C1419AF28E1E962001B2AEA /* familyProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = familyProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2C18C95129100F4E00369A0E /* FamilyProjectTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyProjectTableViewController.swift; sourceTree = "<group>"; };
+		2C18C955291011C700369A0E /* FamilyMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMember.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				2C14198E28E1E960001B2AEA /* SceneDelegate.swift */,
 				2C14199028E1E960001B2AEA /* ViewController.swift */,
 				2C14199228E1E960001B2AEA /* Main.storyboard */,
+				2C18C95129100F4E00369A0E /* FamilyProjectTableViewController.swift */,
+				2C18C955291011C700369A0E /* FamilyMember.swift */,
 				2C14199528E1E961001B2AEA /* Assets.xcassets */,
 				2C14199728E1E961001B2AEA /* LaunchScreen.storyboard */,
 				2C14199A28E1E961001B2AEA /* Info.plist */,
@@ -259,6 +265,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C14199128E1E960001B2AEA /* ViewController.swift in Sources */,
+				2C18C956291011C700369A0E /* FamilyMember.swift in Sources */,
+				2C18C95229100F4E00369A0E /* FamilyProjectTableViewController.swift in Sources */,
 				2C14198D28E1E960001B2AEA /* AppDelegate.swift in Sources */,
 				2C14198F28E1E960001B2AEA /* SceneDelegate.swift in Sources */,
 			);

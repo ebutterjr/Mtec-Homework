@@ -8,7 +8,7 @@
 import UIKit
 
 class FamilyProjectTableViewController: UITableViewController {
-
+    let familyMembers = FamilyMember.family
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,14 +23,31 @@ class FamilyProjectTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return familyMembers.count
     }
-
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let currentFamilyMember = familyMembers[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "addFamilyCell", for: indexPath)
+        var config = cell.defaultContentConfiguration()
+        config.text = currentFamilyMember.name
+        cell.contentConfiguration = config
+        return cell
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "cole", sender: indexPath)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPath = sender as? IndexPath, let detailViewController = segue.destination as? ViewController else {
+            fatalError()
+        }
+        detailViewController.member = familyMembers[indexPath.row]
+    }
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)

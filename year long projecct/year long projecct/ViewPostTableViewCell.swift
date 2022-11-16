@@ -9,15 +9,23 @@ import UIKit
 
 class ViewPostTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var titlePostLable: UILabel!
+    
+    @IBOutlet weak var descriptionPostLable: UILabel!
+    
+    
+    @IBOutlet weak var postImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func update(with post: Post) {
+        titlePostLable.text = post.title
+        descriptionPostLable.text = post.description
+        postImageView.image = post.imageName
     }
+    
+        
 
 }

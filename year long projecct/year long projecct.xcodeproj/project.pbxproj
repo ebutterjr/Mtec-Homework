@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C0EDA7A2911609100D9D3C2 /* PostCreateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0EDA792911609100D9D3C2 /* PostCreateTableViewController.swift */; };
+		2C0EDA7C291160C500D9D3C2 /* ViewPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0EDA7B291160C500D9D3C2 /* ViewPostTableViewCell.swift */; };
+		2C0EDA7E291160DF00D9D3C2 /* ViewPostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0EDA7D291160DF00D9D3C2 /* ViewPostTableViewController.swift */; };
+		2C0EDA802911623800D9D3C2 /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0EDA7F2911623800D9D3C2 /* Posts.swift */; };
 		2C18CA9928EF2DB300319D6A /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C18CA9828EF2DB300319D6A /* ImagePickerManager.swift */; };
 		2C19D06628EDC1B4002FF642 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C19D06528EDC1B4002FF642 /* AppDelegate.swift */; };
 		2C19D06828EDC1B4002FF642 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C19D06728EDC1B4002FF642 /* SceneDelegate.swift */; };
@@ -17,6 +21,7 @@
 		2C19D07D28EDC1B5002FF642 /* year_long_projecctTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C19D07C28EDC1B5002FF642 /* year_long_projecctTests.swift */; };
 		2C19D08728EDC1B5002FF642 /* year_long_projecctUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C19D08628EDC1B5002FF642 /* year_long_projecctUITests.swift */; };
 		2C19D08928EDC1B5002FF642 /* year_long_projecctUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C19D08828EDC1B5002FF642 /* year_long_projecctUITestsLaunchTests.swift */; };
+		2C1BE6162912C24E003ED4DB /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1BE6152912C24E003ED4DB /* PostController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C0EDA792911609100D9D3C2 /* PostCreateTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCreateTableViewController.swift; sourceTree = "<group>"; };
+		2C0EDA7B291160C500D9D3C2 /* ViewPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPostTableViewCell.swift; sourceTree = "<group>"; };
+		2C0EDA7D291160DF00D9D3C2 /* ViewPostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPostTableViewController.swift; sourceTree = "<group>"; };
+		2C0EDA7F2911623800D9D3C2 /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
 		2C18CA9828EF2DB300319D6A /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
 		2C19D06228EDC1B4002FF642 /* year long projecct.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "year long projecct.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C19D06528EDC1B4002FF642 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +60,7 @@
 		2C19D08228EDC1B5002FF642 /* year long projecctUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "year long projecctUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C19D08628EDC1B5002FF642 /* year_long_projecctUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = year_long_projecctUITests.swift; sourceTree = "<group>"; };
 		2C19D08828EDC1B5002FF642 /* year_long_projecctUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = year_long_projecctUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2C1BE6152912C24E003ED4DB /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +114,13 @@
 				2C19D06528EDC1B4002FF642 /* AppDelegate.swift */,
 				2C19D06728EDC1B4002FF642 /* SceneDelegate.swift */,
 				2C19D06928EDC1B4002FF642 /* ViewController.swift */,
+				2C0EDA792911609100D9D3C2 /* PostCreateTableViewController.swift */,
 				2C18CA9828EF2DB300319D6A /* ImagePickerManager.swift */,
 				2C19D06B28EDC1B4002FF642 /* Main.storyboard */,
+				2C0EDA7B291160C500D9D3C2 /* ViewPostTableViewCell.swift */,
+				2C0EDA7D291160DF00D9D3C2 /* ViewPostTableViewController.swift */,
+				2C0EDA7F2911623800D9D3C2 /* Posts.swift */,
+				2C1BE6152912C24E003ED4DB /* PostController.swift */,
 				2C19D06E28EDC1B5002FF642 /* Assets.xcassets */,
 				2C19D07028EDC1B5002FF642 /* LaunchScreen.storyboard */,
 				2C19D07328EDC1B5002FF642 /* Info.plist */,
@@ -265,6 +280,11 @@
 				2C19D06628EDC1B4002FF642 /* AppDelegate.swift in Sources */,
 				2C19D06828EDC1B4002FF642 /* SceneDelegate.swift in Sources */,
 				2C18CA9928EF2DB300319D6A /* ImagePickerManager.swift in Sources */,
+				2C0EDA7E291160DF00D9D3C2 /* ViewPostTableViewController.swift in Sources */,
+				2C1BE6162912C24E003ED4DB /* PostController.swift in Sources */,
+				2C0EDA7C291160C500D9D3C2 /* ViewPostTableViewCell.swift in Sources */,
+				2C0EDA7A2911609100D9D3C2 /* PostCreateTableViewController.swift in Sources */,
+				2C0EDA802911623800D9D3C2 /* Posts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
