@@ -6,9 +6,11 @@
 //
 
 import UIKit
-
+protocol AddAthleteViewControllerDelegate {
+    func didAddAthlete(athlete: Athlete)
+}
 class AddAthleteViewController: UIViewController {
-    
+    var delegate: AddAthleteViewControllerDelegate?
     @IBOutlet weak var athleteNameTextField: UITextField!
     
     @IBOutlet weak var athleteDescriptionTextField: UITextField!
@@ -18,11 +20,9 @@ class AddAthleteViewController: UIViewController {
     }
     
     @IBAction func saveButtonPressed(_ sender: UIButton) {
-        Athlete.athletes.append(Athlete(name: athleteNameTextField.text ?? "", score: athleteDescriptionTextField.text ?? ""))
-        dismiss(animated: true)
+        delegate?.didAddAthlete(athlete: Athlete(name: athleteNameTextField.text ?? "", score: athleteDescriptionTextField.text ?? ""))
+        navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func cancelButtonPressed(_ sender: Any) {
-        dismiss(animated: true)
-    }
+    
 }

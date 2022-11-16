@@ -9,6 +9,10 @@ import UIKit
 
 class GameTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var gameImage: UIImageView!
+    
+    @IBOutlet weak var gameTitle: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,5 +23,8 @@ class GameTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    func update(with game: Game) {
+        gameImage.image = game.image
+        gameTitle.text = game.title
+    }
 }

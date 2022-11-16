@@ -7,8 +7,10 @@
 
 import UIKit
 
-class AthletesTableViewController: UITableViewController, Stepperable {
-   
+class AthletesTableViewController: UITableViewController, Stepperable, AddAthleteViewControllerDelegate {
+    
+    var game: Game?
+    var noGame: Int = 1
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,34 +27,51 @@ class AthletesTableViewController: UITableViewController, Stepperable {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return Athlete.athletes.count
+        guard let game = game else {return 0}
+        return game.athletes.count
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let game = game else {return UITableViewCell()}
         let cell = tableView.dequeueReusableCell(withIdentifier: "athletes", for: indexPath) as! AthletesTableViewCell
-        let athlete = Athlete.athletes[indexPath.row]
+        let athlete = game.athletes[indexPath.row]
         cell.update(with: athlete)
         cell.showsReorderControl = true
         cell.delegate = self
         return cell
     }
     override func viewDidAppear(_ animated: Bool) {
-        Athlete.athletes = Athlete.athletes.sorted(by: {$0.score > $1.score})
+        guard let game = game else {return}
+        self.game?.athletes = game.athletes.sorted(by: {$0.score > $1.score})
         tableView.reloadData()
     }
     func stepperSortValue(athlete: Athlete) {
-        guard let indexAthlete = Athlete.athletes.firstIndex(where: {$0.name == athlete.name}) else { return }
-        Athlete.athletes[indexAthlete].score = athlete.score
-        Athlete.athletes = Athlete.athletes.sorted(by: {$0.score > $1.score})
+        guard var game = game, let indexAthlete = game.athletes.firstIndex(where: {$0.name == athlete.name}) else { return }
+        self.game?.athletes[indexAthlete].score = athlete.score
+        game.athletes[indexAthlete].score = athlete.score
+        self.game?.athletes = game.athletes.sorted(by: {$0.score > $1.score})
         tableView.reloadData()
         
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "AddAthlete", let vc = segue.destination as? AddAthleteViewController else {return}
+        vc.delegate = self
+    }
+    func didAddAthlete(athlete: Athlete) {
+        game?.athletes.append(athlete)
+       let index = Game.games.firstIndex { aGame in
+            aGame.title == game?.title
+        }
+        guard let game = game,
+        let index = index else {return}
+        Game.games[index] = game
+        tableView.reloadData()
+    }
 
-
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

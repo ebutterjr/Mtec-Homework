@@ -9,6 +9,6 @@ import Foundation
 struct Athlete {
     var name: String
     var score: String
-    static var athletes: [Athlete] = [Athlete(name: "name", score: "2")]
+    //static var athletes: [Athlete] = [Athlete(name: "name", score: "2")]
 }
 

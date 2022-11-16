@@ -31,12 +31,11 @@ class AthletesTableViewCell: UITableViewCell {
     }
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
         updateWithStepper()
-        athlete?.score = "\(Int(sender.value))"
         delegate?.stepperSortValue(athlete: athlete!)
     }
     func updateWithStepper() {
         athleteScoreLable.text = "\(Int(athleteStepper.value))"
-        
+        athlete?.score = "\(Int(athleteStepper.value))"
     }
     func update(with athlete: Athlete ) {
         athleteNameLable.text = athlete.name

@@ -9,6 +9,9 @@ import UIKit
 
 class GameViewController: UIViewController {
 
+    @IBOutlet weak var gameSampleImageView: UIImageView!
+    @IBOutlet weak var gameDescriptionTextField: UITextField!
+    @IBOutlet weak var gameTitleTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,6 +19,20 @@ class GameViewController: UIViewController {
     }
     
 
+    @IBAction func chooseImageButtonPressed(_ sender: UIButton) {
+        ImagePickerManager().pickImage(self){ [self] image in
+            gameSampleImageView.image = image
+        }
+    }
+    
+    @IBAction func saveButtonPressed(_ sender: UIButton) {
+        Game.games.append(Game(title: gameTitleTextField.text ?? "", description: gameDescriptionTextField.text ?? "", image: gameSampleImageView.image))
+        dismiss(animated: true)
+    }
+    
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        dismiss(animated: true)
+    }
     /*
     // MARK: - Navigation
 

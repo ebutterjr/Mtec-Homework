@@ -23,23 +23,38 @@ class GameTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return Game.games.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "games", for: indexPath) as! GameTableViewCell
+        let game = Game.games[indexPath.row]
+        cell.update(with: game)
         // Configure the cell...
 
         return cell
     }
-    */
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "game", sender: indexPath)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "game", let indexPath = sender as? IndexPath, let vc = segue.destination as? AthletesTableViewController else {return}
+        let game = Game.games[indexPath.row]
+        vc.game = game
+        // cast the sender as an Int (indexpath.row)
+        // grab the game for that index
+        // get the destination ViewController and cast it as the expected type
+        // assign the .game variable on the destination to be the game selected
+    }
 
     /*
     // Override to support conditional editing of the table view.
