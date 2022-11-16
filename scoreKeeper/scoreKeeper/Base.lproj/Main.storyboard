@@ -66,11 +66,43 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="ee8-WY-Sbt">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Qhc-E0-Tmj">
-                            <connections>
-                                <segue destination="aB3-Q4-fve" kind="show" identifier="AddAthlete" id="L2H-DE-90J"/>
-                            </connections>
-                        </barButtonItem>
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="NVp-RW-Ikw">
+                            <rect key="frame" x="50" y="22" width="0.0" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="Qhc-E0-Tmj">
+                                <connections>
+                                    <segue destination="aB3-Q4-fve" kind="show" identifier="AddAthlete" id="L2H-DE-90J"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="h81-Bp-gHz">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="h2d-dM-DFM">
+                                    <rect key="frame" x="198.33333333333331" y="5" width="137.33333333333331" height="34.333333333333336"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="filled" title="Sort by Lowest"/>
+                                    <connections>
+                                        <action selector="sortByLowestPressed:" destination="rhs-8v-83X" eventType="touchUpInside" id="ICs-aq-n6M"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="sL8-c0-YGc">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ssH-WW-Gnh">
+                                    <rect key="frame" x="56" y="5" width="142.33333333333334" height="34.333333333333336"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="filled" title="Sort by Highest"/>
+                                    <connections>
+                                        <action selector="sortByHighestPressed:" destination="rhs-8v-83X" eventType="touchUpInside" id="A6V-OA-ZK8"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fXz-DN-gV4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

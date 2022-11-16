@@ -8,7 +8,7 @@
 import UIKit
 
 class AthletesTableViewController: UITableViewController, Stepperable, AddAthleteViewControllerDelegate {
-    
+    var isSorting: Bool = true
     var game: Game?
     var noGame: Int = 1
     override func viewDidLoad() {
@@ -23,6 +23,19 @@ class AthletesTableViewController: UITableViewController, Stepperable, AddAthlet
 
     // MARK: - Table view data source
 
+    @IBAction func sortByHighestPressed(_ sender: Any) {
+        guard let game = game else {return}
+        isSorting = true
+        self.game?.athletes = game.athletes.sorted(by: {$0.score > $1.score})
+        tableView.reloadData()
+    }
+    @IBAction func sortByLowestPressed(_ sender: Any) {
+        guard let game = game else {return}
+        isSorting = false
+        self.game?.athletes = game.athletes.sorted(by: {$0.score < $1.score})
+        tableView.reloadData()
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -52,7 +65,11 @@ class AthletesTableViewController: UITableViewController, Stepperable, AddAthlet
         guard var game = game, let indexAthlete = game.athletes.firstIndex(where: {$0.name == athlete.name}) else { return }
         self.game?.athletes[indexAthlete].score = athlete.score
         game.athletes[indexAthlete].score = athlete.score
-        self.game?.athletes = game.athletes.sorted(by: {$0.score > $1.score})
+        if isSorting == true {
+            self.game?.athletes = game.athletes.sorted(by: {$0.score > $1.score})
+        } else if isSorting == false {
+            self.game?.athletes = game.athletes.sorted(by: {$0.score < $1.score})
+        }
         tableView.reloadData()
         
     }
